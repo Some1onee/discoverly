@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = import.meta.env.PROD 
+  ? "http://78.46.160.115:3001/api" 
+  : "http://localhost:3001/api";
 
 const getAuthHeader = () => {
   const token = localStorage.getItem("token");
